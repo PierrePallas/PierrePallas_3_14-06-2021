@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.reservez, .input-search, h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-search i {
+  font-size: 0.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.7rem;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.input-search {
+  background: #e7e6e6;
+  border-top: 3px solid rgba(187, 185, 185, 0.562);
+}
+.input-search #zone-recherche {
+  font-family: "Roboto";
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.input-search input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.reservez {
+  flex-direction: column;
+  margin: 30px 70px 10px 70px;
+}
+.reservez h2 {
+  text-align: center;
+  padding: 0 15px 10px 15px;
+  font-size: 1.4rem;
+}
+.reservez h3 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+  color: #686767;
+  margin-bottom: 20px;
+}
+.reservez button {
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 10px;
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 10%, #ff79da 100%);
+  padding: 15px;
+  border-radius: 25px;
+  border: transparent;
+  cursor: pointer;
+}
+.reservez button:hover {
+  background: #9356dc;
+  background: linear-gradient(90deg, #9356dc 10%, #ff79da 100%);
+}
+.reservez button:active {
+  transform: scale(1.1);
+}
+
+/*# sourceMappingURL=style.css.map */

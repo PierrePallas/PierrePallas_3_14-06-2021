@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import "./_variables.scss";
+@import "./_placeholders.scss";
+@import "./_mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+// Header
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.7rem;
+  width: 100%;
+  @extend %flex-center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+// Recherche
+.input-search {
+  @extend %flex-center;
+  background: rgb(231, 230, 230);
+  border-top: 3px solid rgba(187, 185, 185, 0.562);
+
+  #zone-recherche {
+    font-family: "Roboto";
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  i {
+    @extend %icons;
+  }
+}
+
+// Reservez
+.reservez {
+  @extend %flex-center;
+  flex-direction: column;
+  margin: 30px 70px 10px 70px;
+
+  h2 {
+    text-align: center;
+    padding: 0 15px 10px 15px;
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
+    color: rgb(104, 103, 103);
+    margin-bottom: 20px;
+  }
+
+  button {
+    color: white;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+      350deg,
+      rgba(147, 86, 220, 1) 10%,
+      rgba(255, 121, 218, 1) 100%
+    );
+    padding: 15px;
+    border-radius: 25px;
+    border: transparent;
+    cursor: pointer;
+  }
+  button:hover {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+      90deg,
+      rgba(147, 86, 220, 1) 10%,
+      rgba(255, 121, 218, 1) 100%
+    );
+  }
+  button:active {
+    transform: scale(1.1);
+  }
+}
