@@ -14,7 +14,7 @@
 // Header
 h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   width: 100%;
   @extend %flex-center;
   margin-top: 10px;
@@ -31,7 +31,7 @@ h1 {
     font-family: "Roboto";
     font-weight: bold;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -57,7 +57,7 @@ h1 {
   h2 {
     text-align: center;
     padding: 0 15px 10px 15px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   h3 {
@@ -70,14 +70,9 @@ h1 {
 
   button {
     color: white;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 10px;
-    background: rgb(147, 86, 220);
-    background: linear-gradient(
-      350deg,
-      rgba(147, 86, 220, 1) 10%,
-      rgba(255, 121, 218, 1) 100%
-    );
+    @extend %background-gradient;
     padding: 15px;
     border-radius: 25px;
     border: transparent;
@@ -93,5 +88,174 @@ h1 {
   }
   button:active {
     transform: scale(1.1);
+  }
+}
+
+// Fonctionnement
+h2 {
+  font-size: 1.3rem;
+}
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px 20px 10px 30px;
+
+  .navigation {
+    margin-top: 20px;
+  }
+
+  .menu_fonctionnement {
+    display: flex;
+    margin-top: 20px;
+    @extend %box-shadow;
+    border-radius: 15px;
+    padding: 15px 20px 15px 0;
+    &:hover {
+      background: #9256dc28;
+    }
+    &:focus {
+      background: #9256dc28;
+      i {
+        color: $primaire;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  span {
+    color: white;
+    background: $primaire;
+    padding: 5px 8px;
+    font-size: 0.6rem;
+    border-radius: 30px;
+    margin-left: -15px;
+  }
+
+  i {
+    color: grey;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+// Restaurants
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 20px 20px 20px;
+
+  .card_restaurants {
+    margin-top: 20px;
+    @extend %box-shadow;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    border-radius: 15px;
+    position: relative;
+
+    img {
+      height: 160px;
+      object-fit: cover;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .nouveau {
+      position: absolute;
+      top: 18px;
+      right: 15px;
+      color: rgb(6, 117, 6);
+      background: rgb(164, 250, 197);
+      padding: 5px 10px 5px 10px;
+      font-weight: bold;
+    }
+
+    h3 {
+      font-size: 0.9rem;
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-left: 10px;
+      margin-top: 3px;
+      margin-bottom: 10px;
+    }
+
+    i {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .heart-full {
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+        color: transparent;
+        background: rgb(147, 86, 220);
+        background: linear-gradient(
+          250deg,
+          rgba(147, 86, 220, 1) 10%,
+          rgba(255, 121, 218, 1) 100%
+        );
+        -webkit-background-clip: text;
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  background: rgba(0, 0, 0, 0.822);
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+
+  p {
+    color: white;
+    font-family: "Shrikhand", sans-serif;
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: $primaire;
+    }
+  }
+
+  li {
+    list-style: none;
+    font-size: 0.9rem;
+    margin-top: 7px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  i {
+    margin-right: 7px;
+    font-size: 0.7rem;
   }
 }

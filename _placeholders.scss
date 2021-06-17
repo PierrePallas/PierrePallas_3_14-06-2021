@@ -5,5 +5,20 @@
 }
 
 %icons {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
+}
+
+%box-shadow {
+  box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+}
+
+%background-gradient {
+  background: rgb(147, 86, 220);
+  background: linear-gradient(
+    350deg,
+    rgba(147, 86, 220, 1) 10%,
+    rgba(255, 121, 218, 1) 100%
+  );
 }

@@ -7,7 +7,18 @@
 }
 
 .input-search i {
-  font-size: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.restaurants .card_restaurants, .Fonctionnement .menu_fonctionnement {
+  box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: -1px 3px 0px 0px rgba(0, 0, 0, 0.11);
+}
+
+.reservez button {
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 10%, #ff79da 100%);
 }
 
 * {
@@ -19,7 +30,7 @@
 
 h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -33,7 +44,7 @@ h1 {
   font-family: "Roboto";
   font-weight: bold;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -50,7 +61,7 @@ h1 {
 .reservez h2 {
   text-align: center;
   padding: 0 15px 10px 15px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .reservez h3 {
   text-align: center;
@@ -61,10 +72,8 @@ h1 {
 }
 .reservez button {
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin-top: 10px;
-  background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 10%, #ff79da 100%);
   padding: 15px;
   border-radius: 25px;
   border: transparent;
@@ -76,6 +85,149 @@ h1 {
 }
 .reservez button:active {
   transform: scale(1.1);
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+.Fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 50px 20px 10px 30px;
+}
+.Fonctionnement .navigation {
+  margin-top: 20px;
+}
+.Fonctionnement .menu_fonctionnement {
+  display: flex;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 15px 20px 15px 0;
+}
+.Fonctionnement .menu_fonctionnement:hover {
+  background: #9256dc28;
+}
+.Fonctionnement .menu_fonctionnement:focus {
+  background: #9256dc28;
+}
+.Fonctionnement .menu_fonctionnement:focus i {
+  color: #9356dc;
+}
+.Fonctionnement a {
+  text-decoration: none;
+  color: black;
+}
+.Fonctionnement p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.Fonctionnement span {
+  color: white;
+  background: #9356dc;
+  padding: 5px 8px;
+  font-size: 0.6rem;
+  border-radius: 30px;
+  margin-left: -15px;
+}
+.Fonctionnement i {
+  color: grey;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  margin: 80px 20px 20px 20px;
+}
+.restaurants .card_restaurants {
+  margin-top: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.233);
+  border-radius: 15px;
+  position: relative;
+}
+.restaurants .card_restaurants img {
+  height: 160px;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.restaurants .card_restaurants a {
+  text-decoration: none;
+  color: black;
+}
+.restaurants .card_restaurants .nouveau {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  color: #067506;
+  background: #a4fac5;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+}
+.restaurants .card_restaurants h3 {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.restaurants .card_restaurants p {
+  font-size: 0.9rem;
+  margin-left: 10px;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.restaurants .card_restaurants i {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1.3rem;
+}
+.restaurants .card_restaurants .heart-full {
+  opacity: 0;
+}
+.restaurants .card_restaurants .heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background: #9356dc;
+  background: linear-gradient(250deg, #9356dc 10%, #ff79da 100%);
+  -webkit-background-clip: text;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.822);
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+footer p {
+  color: white;
+  font-family: "Shrikhand", sans-serif;
+  margin-bottom: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #9356dc;
+}
+footer li {
+  list-style: none;
+  font-size: 0.9rem;
+  margin-top: 7px;
+}
+footer li:hover {
+  text-decoration: underline;
+}
+footer i {
+  margin-right: 7px;
+  font-size: 0.7rem;
 }
 
 /*# sourceMappingURL=style.css.map */
