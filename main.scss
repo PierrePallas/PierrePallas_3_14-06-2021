@@ -19,6 +19,66 @@ h1 {
   @extend %flex-center;
   margin-top: 10px;
   margin-bottom: 10px;
+  user-select: none;
+}
+
+header {
+  position: relative;
+
+  i {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    &:active {
+      color: $primaire;
+    }
+  }
+}
+
+// Chargement
+.chargement {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  @extend %flex-center;
+  animation: loader 2s linear;
+  animation-fill-mode: forwards;
+  background: rgba(255, 255, 255, 0.664);
+  z-index: 99;
+
+  @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      z-index: -99;
+    }
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    @extend %background-gradient;
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 8px),
+      #000 0
+    );
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 // Recherche
@@ -29,11 +89,22 @@ h1 {
 
   #zone-recherche {
     font-family: "Roboto";
-    font-weight: bold;
     text-align: center;
     font-size: 0.9rem;
     padding-top: 8px;
     padding-bottom: 8px;
+    &::-webkit-input-placeholder {
+      font-weight: bold;
+      color: #000000;
+    }
+    &::-moz-placeholder {
+      font-weight: bold;
+      color: #000000;
+    }
+    &::-ms-input-placeholder {
+      font-weight: bold;
+      color: #000000;
+    }
   }
 
   input {
@@ -85,6 +156,7 @@ h1 {
       rgba(147, 86, 220, 1) 10%,
       rgba(255, 121, 218, 1) 100%
     );
+    box-shadow: 0 5px 15px 0 rgb(190, 190, 190);
   }
   button:active {
     transform: scale(1.1);
@@ -224,7 +296,7 @@ h2 {
 // Footer
 footer {
   background: rgba(0, 0, 0, 0.822);
-  margin-top: 70px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   padding-top: 20px;
@@ -257,5 +329,141 @@ footer {
   i {
     margin-right: 7px;
     font-size: 0.7rem;
+  }
+}
+
+.icon-align {
+  min-width: 20px;
+  display: inline-block;
+}
+
+// Page restaurants
+
+.card_presentation {
+  img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+  }
+
+  .text-presentation {
+    background: white;
+    margin-top: -30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+  }
+
+  p {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 1.3rem;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  i {
+    position: absolute;
+    right: 35px;
+    top: 25px;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .heart-full {
+    opacity: 0;
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: 1;
+      color: transparent;
+      background: rgb(147, 86, 220);
+      background: linear-gradient(
+        250deg,
+        rgba(147, 86, 220, 1) 10%,
+        rgba(255, 121, 218, 1) 100%
+      );
+      -webkit-background-clip: text;
+    }
+  }
+}
+
+// Menu restaurants
+.menu_restaurant {
+  margin-top: 20px;
+
+  h2 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-left: 8px;
+    margin-bottom: 25px;
+    position: relative;
+  }
+
+  h2::after {
+    content: "";
+    width: 2.3rem;
+    height: 0.15rem;
+    background: $tertiaire;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+  }
+
+  .__card {
+    width: 95%;
+    margin: 10px 0px 10px 8px;
+    @extend %box-shadow;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .flex_menu {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3px;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .prix {
+    font-weight: bold;
+  }
+}
+
+.commander {
+  @extend %flex-center;
+
+  button {
+    @extend %flex-center;
+    min-width: 40%;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+    @extend %background-gradient;
+    padding: 15px;
+    border-radius: 25px;
+    border: transparent;
+    cursor: pointer;
+  }
+  button:hover {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(
+      90deg,
+      rgba(147, 86, 220, 1) 10%,
+      rgba(255, 121, 218, 1) 100%
+    );
+    @extend %box-shadow;
+  }
+  button:active {
+    transform: scale(1.1);
   }
 }
