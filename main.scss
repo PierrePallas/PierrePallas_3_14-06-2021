@@ -43,12 +43,16 @@ header {
   width: 100%;
   @extend %flex-center;
   animation: loader 2s linear;
-  animation-fill-mode: forwards;
+  animation-fill-mode: both;
   background: rgba(255, 255, 255, 0.664);
   z-index: 99;
 
   @keyframes loader {
     0% {
+      opacity: 1;
+    }
+
+    50% {
       opacity: 1;
     }
 
@@ -274,6 +278,7 @@ h2 {
       right: 20px;
       bottom: 20px;
       font-size: 1.3rem;
+      cursor: pointer;
     }
 
     .heart-full {
@@ -338,6 +343,12 @@ footer {
 }
 
 // Page restaurants
+header {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
 
 .card_presentation {
   img {
@@ -411,13 +422,84 @@ footer {
     margin-top: 20px;
   }
 
-  .__card {
+  .__card1,
+  .__card2,
+  .__card3 {
     width: 95%;
     margin: 10px 0px 10px 8px;
     @extend %box-shadow;
     border-radius: 15px;
     padding: 10px;
     cursor: pointer;
+    position: relative;
+    &:hover {
+      .--selection {
+        animation: checked-menu 0.8s ease;
+        animation-fill-mode: forwards;
+        opacity: 1;
+
+        @keyframes checked-menu {
+          0% {
+            right: -50px;
+          }
+          100% {
+            right: 0;
+          }
+        }
+      }
+      .prix {
+        transform: translateX(-60px);
+      }
+
+      i {
+        animation: rotation 0.5s ease;
+        animation-fill-mode: forwards;
+        @keyframes rotation {
+          0% {
+            transform: rotate(180deg);
+          }
+          100% {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+  .__card1 {
+    animation: menu1 2s ease;
+  }
+
+  @keyframes menu1 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .__card2 {
+    animation: menu2 3s ease;
+  }
+  @keyframes menu2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .__card3 {
+    animation: menu3 4s ease;
+  }
+  @keyframes menu3 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   h3 {
@@ -436,6 +518,23 @@ footer {
 
   .prix {
     font-weight: bold;
+  }
+
+  .--selection {
+    transform: translateX(50);
+    position: absolute;
+    background: $tertiaire;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    right: -60px;
+    top: 0px;
+    opacity: 0;
+  }
+
+  i {
+    color: white;
+    padding: 20px;
+    transform: rotate(180deg);
   }
 }
 
