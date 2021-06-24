@@ -8,12 +8,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: $font-body;
 }
 
 // Header
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: $font-title;
   font-size: 1.5rem;
   width: 100%;
   @extend %flex-center;
@@ -92,7 +92,7 @@ header {
   border-top: 3px solid rgba(187, 185, 185, 0.562);
 
   #zone-recherche {
-    font-family: "Roboto";
+    font-family: $font-body;
     text-align: center;
     font-size: 0.9rem;
     padding-top: 8px;
@@ -310,7 +310,7 @@ footer {
 
   p {
     color: white;
-    font-family: "Shrikhand", sans-serif;
+    font-family: $font-title;
     margin-bottom: 10px;
   }
 
@@ -367,7 +367,7 @@ header {
   }
 
   p {
-    font-family: "Shrikhand", sans-serif;
+    font-family: $font-title;
     font-size: 1.3rem;
     padding-left: 20px;
     padding-top: 20px;
@@ -435,6 +435,7 @@ header {
     &:hover {
       .--selection {
         animation: checked-menu 0.8s ease;
+        -webkit-animation: checked-menu 0.8s ease;
         animation-fill-mode: forwards;
         opacity: 1;
 
@@ -453,20 +454,26 @@ header {
 
       i {
         animation: rotation 0.5s ease;
+        -webkit-animation: rotation 0.5s ease;
         animation-fill-mode: forwards;
         @keyframes rotation {
           0% {
-            transform: rotate(180deg);
-          }
-          100% {
             transform: rotate(0deg);
           }
+          100% {
+            transform: rotate(360deg);
+          }
         }
+      }
+      .text-menu,
+      h3 {
+        max-width: 70%;
       }
     }
   }
   .__card1 {
     animation: menu1 2s ease;
+    -webkit-animation: menu1 2s ease;
   }
 
   @keyframes menu1 {
@@ -480,6 +487,7 @@ header {
 
   .__card2 {
     animation: menu2 3s ease;
+    -webkit-animation: menu2 3s ease;
   }
   @keyframes menu2 {
     from {
@@ -492,6 +500,7 @@ header {
 
   .__card3 {
     animation: menu3 4s ease;
+    -webkit-animation: menu3 4s ease;
   }
   @keyframes menu3 {
     from {
@@ -504,6 +513,10 @@ header {
 
   h3 {
     font-size: 0.9rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
   }
 
   .flex_menu {
@@ -514,6 +527,13 @@ header {
 
   p {
     font-size: 0.8rem;
+  }
+
+  .text-menu {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
   }
 
   .prix {
@@ -534,7 +554,7 @@ header {
   i {
     color: white;
     padding: 20px;
-    transform: rotate(180deg);
+    transform: rotate(0deg);
   }
 }
 

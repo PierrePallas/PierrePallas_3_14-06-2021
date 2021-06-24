@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -94,7 +94,7 @@ header i:active {
   border-top: 3px solid rgba(187, 185, 185, 0.562);
 }
 .input-search #zone-recherche {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 0.9rem;
   padding-top: 8px;
@@ -377,6 +377,7 @@ header a {
 .menu_restaurant .__card2:hover .--selection,
 .menu_restaurant .__card3:hover .--selection {
   animation: checked-menu 0.8s ease;
+  -webkit-animation: checked-menu 0.8s ease;
   animation-fill-mode: forwards;
   opacity: 1;
 }
@@ -397,18 +398,28 @@ header a {
 .menu_restaurant .__card2:hover i,
 .menu_restaurant .__card3:hover i {
   animation: rotation 0.5s ease;
+  -webkit-animation: rotation 0.5s ease;
   animation-fill-mode: forwards;
 }
 @keyframes rotation {
   0% {
-    transform: rotate(180deg);
-  }
-  100% {
     transform: rotate(0deg);
   }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menu_restaurant .__card1:hover .text-menu,
+.menu_restaurant .__card1:hover h3,
+.menu_restaurant .__card2:hover .text-menu,
+.menu_restaurant .__card2:hover h3,
+.menu_restaurant .__card3:hover .text-menu,
+.menu_restaurant .__card3:hover h3 {
+  max-width: 70%;
 }
 .menu_restaurant .__card1 {
   animation: menu1 2s ease;
+  -webkit-animation: menu1 2s ease;
 }
 @keyframes menu1 {
   from {
@@ -420,6 +431,7 @@ header a {
 }
 .menu_restaurant .__card2 {
   animation: menu2 3s ease;
+  -webkit-animation: menu2 3s ease;
 }
 @keyframes menu2 {
   from {
@@ -431,6 +443,7 @@ header a {
 }
 .menu_restaurant .__card3 {
   animation: menu3 4s ease;
+  -webkit-animation: menu3 4s ease;
 }
 @keyframes menu3 {
   from {
@@ -442,6 +455,10 @@ header a {
 }
 .menu_restaurant h3 {
   font-size: 0.9rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
 }
 .menu_restaurant .flex_menu {
   display: flex;
@@ -450,6 +467,12 @@ header a {
 }
 .menu_restaurant p {
   font-size: 0.8rem;
+}
+.menu_restaurant .text-menu {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
 }
 .menu_restaurant .prix {
   font-weight: bold;
@@ -467,7 +490,7 @@ header a {
 .menu_restaurant i {
   color: white;
   padding: 20px;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 
 .commander button {
