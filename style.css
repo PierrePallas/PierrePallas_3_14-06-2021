@@ -152,24 +152,35 @@ header i:active {
   transform: scale(1.1);
 }
 
-h2 {
-  font-size: 1.3rem;
-}
-
 .Fonctionnement {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin: 50px 20px 10px 30px;
 }
+.Fonctionnement h2 {
+  font-size: 1.3rem;
+  margin-left: -10px;
+}
 .Fonctionnement .navigation {
   margin-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  .Fonctionnement .navigation {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .Fonctionnement .menu_fonctionnement {
   display: flex;
   margin-top: 20px;
   border-radius: 15px;
   padding: 15px 20px 15px 0;
+}
+@media screen and (min-width: 1440px) {
+  .Fonctionnement .menu_fonctionnement {
+    width: 30%;
+  }
 }
 .Fonctionnement .menu_fonctionnement:hover {
   background: #9256dc28;
@@ -203,15 +214,31 @@ h2 {
 }
 
 .restaurants {
-  display: flex;
-  flex-direction: column;
   margin: 80px 20px 20px 20px;
 }
+.restaurants h2 {
+  font-size: 1.3rem;
+}
+.restaurants .flex_restaurants {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+  .restaurants .flex_restaurants {
+    flex-direction: initial;
+    justify-content: space-around;
+  }
+}
 .restaurants .card_restaurants {
-  margin-top: 20px;
+  margin-top: 25px;
   border: 1px solid rgba(128, 128, 128, 0.233);
   border-radius: 15px;
   position: relative;
+}
+@media screen and (min-width: 900px) {
+  .restaurants .card_restaurants {
+    width: 24%;
+  }
 }
 .restaurants .card_restaurants img {
   height: 160px;
@@ -228,8 +255,8 @@ h2 {
   position: absolute;
   top: 18px;
   right: 15px;
-  color: #067506;
-  background: #a4fac5;
+  color: #277447;
+  background: #a4f5da;
   padding: 5px 10px 5px 10px;
   font-weight: bold;
 }
@@ -270,6 +297,11 @@ footer {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    align-items: center;
+  }
 }
 footer p {
   color: white;
@@ -343,8 +375,19 @@ header a {
   -webkit-background-clip: text;
 }
 
+@media screen and (min-width: 1024px) {
+  .section_menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .menu_restaurant {
   margin-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .menu_restaurant {
+    width: 35%;
+  }
 }
 .menu_restaurant h2 {
   font-size: 0.9rem;
@@ -486,7 +529,7 @@ header a {
   right: -60px;
   top: 0px;
   opacity: 0;
-  height: 6.4vh;
+  height: 60px;
 }
 .menu_restaurant i {
   color: white;
