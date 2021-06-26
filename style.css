@@ -142,10 +142,11 @@ header i:active {
   border-radius: 25px;
   border: transparent;
   cursor: pointer;
+  transition: 0.4s;
 }
 .reservez button:hover {
   background: #9356dc;
-  background: linear-gradient(90deg, #9356dc 10%, #ff79da 100%);
+  background: linear-gradient(90deg, #be8efa 10%, #ff79da 100%);
   box-shadow: 0 5px 15px 0 #bebebe;
 }
 .reservez button:active {
@@ -176,6 +177,7 @@ header i:active {
   margin-top: 20px;
   border-radius: 15px;
   padding: 15px 20px 15px 0;
+  transition: 0.4s;
 }
 @media screen and (min-width: 1440px) {
   .Fonctionnement .menu_fonctionnement {
@@ -280,6 +282,7 @@ header i:active {
 }
 .restaurants .card_restaurants .heart-full {
   opacity: 0;
+  transition: 0.4s;
 }
 .restaurants .card_restaurants .heart-full:hover {
   opacity: 1;
@@ -311,6 +314,7 @@ footer p {
 footer a {
   text-decoration: none;
   color: white;
+  transition: 0.4s;
 }
 footer a:hover {
   color: #9356dc;
@@ -366,6 +370,7 @@ header a {
 }
 .card_presentation .heart-full {
   opacity: 0;
+  transition: 0.4s;
 }
 .card_presentation .heart-full:hover, .card_presentation .heart-full:active, .card_presentation .heart-full:focus {
   opacity: 1;
@@ -415,6 +420,7 @@ header a {
   padding: 10px;
   cursor: pointer;
   position: relative;
+  opacity: 0;
 }
 .menu_restaurant .__card1:hover .--selection,
 .menu_restaurant .__card2:hover .--selection,
@@ -427,15 +433,18 @@ header a {
 @keyframes checked-menu {
   0% {
     right: -50px;
+    opacity: 0;
   }
   100% {
     right: 0;
+    opacity: 1;
   }
 }
 .menu_restaurant .__card1:hover .prix,
 .menu_restaurant .__card2:hover .prix,
 .menu_restaurant .__card3:hover .prix {
   transform: translateX(-60px);
+  transition: 0.8s;
 }
 .menu_restaurant .__card1:hover i,
 .menu_restaurant .__card2:hover i,
@@ -461,11 +470,16 @@ header a {
   max-width: 70%;
 }
 .menu_restaurant .__card1 {
-  animation: menu1 2s ease;
-  -webkit-animation: menu1 2s ease;
+  animation: menu1 0.5s ease;
+  animation-fill-mode: forwards;
+  -webkit-animation: menu1 0.5s ease;
+  -webkit-animation-fill-mode: forwards;
 }
 @keyframes menu1 {
-  from {
+  0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   to {
@@ -473,11 +487,18 @@ header a {
   }
 }
 .menu_restaurant .__card2 {
-  animation: menu2 3s ease;
-  -webkit-animation: menu2 3s ease;
+  animation: menu2 1s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  -webkit-animation: menu2 1s ease;
+  -webkit-animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
 }
 @keyframes menu2 {
-  from {
+  0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   to {
@@ -485,14 +506,21 @@ header a {
   }
 }
 .menu_restaurant .__card3 {
-  animation: menu3 4s ease;
-  -webkit-animation: menu3 4s ease;
+  animation: menu3 1.5s ease;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation: menu3 1.5s ease;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
 }
 @keyframes menu3 {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  50% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
@@ -546,10 +574,11 @@ header a {
   border-radius: 25px;
   border: transparent;
   cursor: pointer;
+  transition: 0.4s;
 }
 .commander button:hover {
   background: #9356dc;
-  background: linear-gradient(90deg, #9356dc 10%, #ff79da 100%);
+  background: linear-gradient(90deg, #be8efa 10%, #ff79da 100%);
 }
 .commander button:active {
   transform: scale(1.1);

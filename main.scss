@@ -152,12 +152,13 @@ header {
     border-radius: 25px;
     border: transparent;
     cursor: pointer;
+    transition: 0.4s;
   }
   button:hover {
     background: rgb(147, 86, 220);
     background: linear-gradient(
       90deg,
-      rgba(147, 86, 220, 1) 10%,
+      rgb(190, 142, 250) 10%,
       rgba(255, 121, 218, 1) 100%
     );
     box-shadow: 0 5px 15px 0 rgb(190, 190, 190);
@@ -195,6 +196,7 @@ header {
     @extend %box-shadow;
     border-radius: 15px;
     padding: 15px 20px 15px 0;
+    transition: 0.4s;
     &:hover {
       background: #9256dc28;
     }
@@ -305,6 +307,7 @@ header {
 
     .heart-full {
       opacity: 0;
+      transition: 0.4s;
       &:hover {
         opacity: 1;
         color: transparent;
@@ -342,6 +345,7 @@ footer {
   a {
     text-decoration: none;
     color: white;
+    transition: 0.4s;
     &:hover {
       color: $primaire;
     }
@@ -408,6 +412,7 @@ header {
 
   .heart-full {
     opacity: 0;
+    transition: 0.4s;
     &:hover,
     &:active,
     &:focus {
@@ -466,6 +471,7 @@ header {
     padding: 10px;
     cursor: pointer;
     position: relative;
+    opacity: 0;
     &:hover {
       .--selection {
         animation: checked-menu 0.8s ease;
@@ -476,14 +482,17 @@ header {
         @keyframes checked-menu {
           0% {
             right: -50px;
+            opacity: 0;
           }
           100% {
             right: 0;
+            opacity: 1;
           }
         }
       }
       .prix {
         transform: translateX(-60px);
+        transition: 0.8s;
       }
 
       i {
@@ -506,12 +515,17 @@ header {
     }
   }
   .__card1 {
-    animation: menu1 2s ease;
-    -webkit-animation: menu1 2s ease;
+    animation: menu1 0.5s ease;
+    animation-fill-mode: forwards;
+    -webkit-animation: menu1 0.5s ease;
+    -webkit-animation-fill-mode: forwards;
   }
 
   @keyframes menu1 {
-    from {
+    0% {
+      opacity: 0;
+    }
+    50% {
       opacity: 0;
     }
     to {
@@ -520,11 +534,18 @@ header {
   }
 
   .__card2 {
-    animation: menu2 3s ease;
-    -webkit-animation: menu2 3s ease;
+    animation: menu2 1s ease;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    -webkit-animation: menu2 1s ease;
+    -webkit-animation-delay: 0.5s;
+    -webkit-animation-fill-mode: forwards;
   }
   @keyframes menu2 {
-    from {
+    0% {
+      opacity: 0;
+    }
+    50% {
       opacity: 0;
     }
     to {
@@ -533,14 +554,21 @@ header {
   }
 
   .__card3 {
-    animation: menu3 4s ease;
-    -webkit-animation: menu3 4s ease;
+    animation: menu3 1.5s ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: menu3 1.5s ease;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
   }
   @keyframes menu3 {
-    from {
+    0% {
       opacity: 0;
     }
-    to {
+    50% {
+      opacity: 0;
+    }
+    100% {
       opacity: 1;
     }
   }
@@ -607,12 +635,13 @@ header {
     border-radius: 25px;
     border: transparent;
     cursor: pointer;
+    transition: 0.4s;
   }
   button:hover {
     background: rgb(147, 86, 220);
     background: linear-gradient(
       90deg,
-      rgba(147, 86, 220, 1) 10%,
+      rgb(190, 142, 250) 10%,
       rgba(255, 121, 218, 1) 100%
     );
     @extend %box-shadow;
