@@ -473,7 +473,7 @@ header {
     position: relative;
     opacity: 0;
     &:hover {
-      .--selection {
+      .selection {
         animation: checked-menu 0.8s ease;
         -webkit-animation: checked-menu 0.8s ease;
         animation-fill-mode: forwards;
@@ -602,8 +602,8 @@ header {
     font-weight: bold;
   }
 
-  .--selection {
-    transform: translateX(50);
+  .selection {
+    transform: translateX(0px);
     position: absolute;
     background: $tertiaire;
     border-top-right-radius: 15px;

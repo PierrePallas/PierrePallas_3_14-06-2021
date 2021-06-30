@@ -422,9 +422,9 @@ header a {
   position: relative;
   opacity: 0;
 }
-.menu_restaurant .__card1:hover .--selection,
-.menu_restaurant .__card2:hover .--selection,
-.menu_restaurant .__card3:hover .--selection {
+.menu_restaurant .__card1:hover .selection,
+.menu_restaurant .__card2:hover .selection,
+.menu_restaurant .__card3:hover .selection {
   animation: checked-menu 0.8s ease;
   -webkit-animation: checked-menu 0.8s ease;
   animation-fill-mode: forwards;
@@ -548,8 +548,8 @@ header a {
 .menu_restaurant .prix {
   font-weight: bold;
 }
-.menu_restaurant .--selection {
-  transform: translateX(50);
+.menu_restaurant .selection {
+  transform: translateX(0px);
   position: absolute;
   background: #99e2d0;
   border-top-right-radius: 15px;
